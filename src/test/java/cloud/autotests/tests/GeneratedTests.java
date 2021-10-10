@@ -16,7 +16,7 @@ public class GeneratedTests extends TestBase {
     @Description("Soon to be implemented by you (or QA.GURU engineers)")
     @DisplayName("maxilect test")
     void generatedTest() {
-        step("Open https://www.letu.ru/", () -> {
+        step("Open https://www.letu.ru", () -> {
             step("// todo: just add selenium action");
         });
     }

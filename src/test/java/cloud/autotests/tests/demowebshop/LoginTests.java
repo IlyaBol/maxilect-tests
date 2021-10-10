@@ -1,6 +1,6 @@
 package cloud.autotests.tests.demowebshop;
 
-import cloud.autotests.config.demowebshop.App;
+import cloud.autotests.config.App;
 import cloud.autotests.helpers.AllureRestAssuredFilter;
 import cloud.autotests.tests.TestBase;
 import com.codeborne.selenide.Configuration;
