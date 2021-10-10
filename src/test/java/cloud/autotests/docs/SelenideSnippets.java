@@ -113,7 +113,7 @@ public class SelenideSnippets {
 
 
         //longer timeouts
-        $("").shouldBe(visible, Duration.ofSeconds(30));
+        $("").shouldBe(visible, Duration.ofSeconds(3000));
         $("").waitUntil(visible, 30000);  //is deprecated
 
     }
