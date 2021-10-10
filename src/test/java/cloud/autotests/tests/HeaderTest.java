@@ -20,7 +20,7 @@ import static io.qameta.allure.Allure.step;
         @AllureId("5197")
         void headerTest() {
             step("Open https://maxilect.com/", () ->
-                    open("https://maxilect.ru/"));
+                    open("https://www.letu.ru/"));
 
             step("Select SOLUTION", () ->
                     $("#menu-item-626").click());
