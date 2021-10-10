@@ -22,10 +22,6 @@ import static io.qameta.allure.Allure.step;
             step("Open https://maxilect.com/", () ->
                     open("https://maxilect.ru/"));
 
-            step("Select EN", () -> {
-                $(".language-switcher").shouldHave(text("EN")).click();
-            });
-
             step("Select SOLUTION", () ->
                     $("#menu-item-626").click());
             step("Select Ad Tech", () ->
