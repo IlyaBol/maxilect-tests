@@ -25,6 +25,7 @@ public class DriverSettings {
         chromeOptions.addArguments("--disable-infobars");
         chromeOptions.addArguments("--disable-popup-blocking");
         chromeOptions.addArguments("--disable-notifications");
+        chromeOptions.addArguments("--force-device-scale-factor=1");
         chromeOptions.addArguments("--lang=en-en");
 
         if (Project.isWebMobile()) { // for chrome only
