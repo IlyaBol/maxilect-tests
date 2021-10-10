@@ -14,21 +14,22 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 public class SolutionTest {
     @Test
+    @AllureId("5197")
     void loginTest() {
-        step("Open page", () ->
+        step("Open https://maxilect.com/", () ->
                 open("https://maxilect.ru/"));
 
         step("Select EN", () -> {
             $(".language-switcher").shouldHave(text("EN")).click();
         });
 
-        step("Select SOLUTIONS", () ->
+        step("Select SOLUTION", () ->
                 $("#menu-item-626").click());
-        step("Select Ad Tech ", () ->
+        step("Select Ad Tech", () ->
                 $x("//*[@class='Top-welcome']//*[text() = 'Ad Tech']").click());
-        step("Select Fintech ", () ->
+        step("Select Fintech", () ->
                 $x("//*[@class='Top-welcome']//*[text() = 'Fintech']").click());
-        step("Select QA Automation ", () ->
+        step("Select QA Automation", () ->
                 $x("//*[@class='Top-welcome']//*[text() = 'QA Automation']").click());
         step("Select Blockchain", () ->
                 $x("//*[@class='Top-welcome']//*[text() = 'Blockchain']").click());
