@@ -3,6 +3,8 @@ package cloud.autotests.helpers;
 import cloud.autotests.config.App;
 import cloud.autotests.config.Project;
 import com.codeborne.selenide.Configuration;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.PageLoadStrategy;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
@@ -27,7 +29,14 @@ public class DriverSettings {
         chromeOptions.addArguments("--disable-popup-blocking");
         chromeOptions.addArguments("--disable-notifications");
         chromeOptions.addArguments("--force-device-scale-factor=1");
+        chromeOptions.addArguments("enable-features=NetworkServiceInProcess");
         chromeOptions.addArguments("--lang=en-en");
+        chromeOptions.addArguments("--disable-gpu");
+        WebDriverManager.chromedriver().forceDownload().setup();
+
+
+
+
 
         if (Project.isWebMobile()) { // for chrome only
             Map<String, Object> mobileDevice = new HashMap<>();
