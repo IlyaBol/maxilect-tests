@@ -14,6 +14,8 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 public class SolutionTest {
     @Test
+    @DisplayName("Sucsessful SOLUTIONS")
+    @Feature("Header Test")
     @AllureId("5197")
     void loginTest() {
         step("Open https://maxilect.com/", () ->
