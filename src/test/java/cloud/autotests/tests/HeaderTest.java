@@ -14,7 +14,7 @@ import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
       public class HeaderTest extends TestBase {
-        @Test
+        @Test()
         @DisplayName("Sucsessful SOLUTIONS")
         @Feature("Header Test")
         @AllureId("5197")
