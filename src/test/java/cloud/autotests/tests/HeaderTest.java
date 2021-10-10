@@ -19,11 +19,9 @@ import static io.qameta.allure.Allure.step;
         @Feature("Header Test")
         @AllureId("5197")
         void headerTest() {
-            Configuration.timeout = 6000;
             step("Open https://maxilect.com/", () ->
                     open("https://maxilect.com/"));
-
-            step("Select SOLUTION", () ->
+            step("Select Ad Tech", () ->
                     $("#menu-item-626").click());
             step("Select Ad Tech", () ->
                     $x("//*[@class='Top-welcome']//*[text() = 'Ad Tech']").click());
