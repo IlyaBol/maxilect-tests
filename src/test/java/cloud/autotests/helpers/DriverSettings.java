@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,7 +20,11 @@ public class DriverSettings {
         Configuration.browserVersion = Project.config.browserVersion();
         Configuration.browserSize = Project.config.browserSize();
         Configuration.baseUrl = App.config.webUrl();
-        Configuration.timeout = 6000;
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
+        Configuration.timeout = 8000;
+
+
+
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         ChromeOptions chromeOptions = new ChromeOptions();
@@ -29,7 +34,6 @@ public class DriverSettings {
         chromeOptions.addArguments("--disable-popup-blocking");
         chromeOptions.addArguments("--disable-notifications");
         chromeOptions.addArguments("--force-device-scale-factor=1");
-        chromeOptions.addArguments("enable-features=NetworkServiceInProcess");
         chromeOptions.addArguments("--lang=en-en");
         chromeOptions.addArguments("--disable-gpu");
         WebDriverManager.chromedriver().forceDownload().setup();
@@ -47,7 +51,9 @@ public class DriverSettings {
         if (Project.isRemoteWebDriver()) {
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
-            Configuration.remote = Project.config.remoteDriverUrl();
+            //Configuration.remote = Project.config.remoteDriverUrl();
+
+
         }
 
         capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);

@@ -1,6 +1,7 @@
 package cloud.autotests.config;
 
 import org.aeonbits.owner.Config;
+import org.junit.jupiter.api.Test;
 
 @Config.LoadPolicy(Config.LoadType.MERGE)
 @Config.Sources({
@@ -15,6 +16,7 @@ public interface ProjectConfig extends Config {
     @DefaultValue("91.0")
     String browserVersion();
     @DefaultValue("1920x1080")
+
     String browserSize();
     String browserMobileView();
     String remoteDriverUrl();
