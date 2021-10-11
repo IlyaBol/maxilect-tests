@@ -4,14 +4,20 @@ import cloud.autotests.config.App;
 import cloud.autotests.config.Project;
 import com.codeborne.selenide.Configuration;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.PageLoadStrategy;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
+import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 public class DriverSettings {
 
@@ -20,9 +26,6 @@ public class DriverSettings {
         Configuration.browserVersion = Project.config.browserVersion();
         Configuration.browserSize = Project.config.browserSize();
         Configuration.baseUrl = App.config.webUrl();
-
-
-
 
 
 
@@ -36,6 +39,7 @@ public class DriverSettings {
         chromeOptions.addArguments("--force-device-scale-factor=1");
         chromeOptions.addArguments("--lang=en-en");
         chromeOptions.addArguments("--disable-gpu");
+        WebDriverManager.chromedriver().timeout(80000);
         WebDriverManager.chromedriver().forceDownload().setup();
 
 

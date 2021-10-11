@@ -19,7 +19,6 @@ import static io.qameta.allure.Allure.step;
         @Feature("Header Test")
         @AllureId("5197")
         void headerTest() {
-            Configuration.timeout = 80000;
             step("Open https://maxilect.com/", () ->
                     open("https://maxilect.com/"));
             step("Select Ad Tech", () ->
