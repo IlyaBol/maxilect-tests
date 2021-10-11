@@ -19,8 +19,8 @@ public class TestBase {
     @BeforeAll
     static void setUp() {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+        Configuration.timeout = 800000;
         DriverSettings.configure();
-        Configuration.timeout = 8000;
     }
 
     @AfterEach
