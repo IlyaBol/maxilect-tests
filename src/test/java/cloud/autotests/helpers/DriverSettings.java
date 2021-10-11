@@ -32,6 +32,7 @@ public class DriverSettings {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         ChromeOptions chromeOptions = new ChromeOptions();
         Configuration.browserCapabilities = capabilities;
+        Configuration.browserCapabilities.setCapability("enableVNC", true);
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--disable-infobars");
         chromeOptions.addArguments("--disable-popup-blocking");
@@ -39,7 +40,6 @@ public class DriverSettings {
         chromeOptions.addArguments("--force-device-scale-factor=1");
         chromeOptions.addArguments("--lang=en-en");
         chromeOptions.addArguments("--disable-gpu");
-        WebDriverManager.chromedriver().timeout(80000);
         WebDriverManager.chromedriver().forceDownload().setup();
 
 
