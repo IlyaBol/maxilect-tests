@@ -32,7 +32,7 @@ public class DriverSettings {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         ChromeOptions chromeOptions = new ChromeOptions();
         Configuration.browserCapabilities = capabilities;
-        Configuration.browserCapabilities.setCapability("enableVNC", true);
+        Configuration.timeout = 6000;
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--disable-infobars");
         chromeOptions.addArguments("--disable-popup-blocking");
@@ -53,6 +53,7 @@ public class DriverSettings {
         }
 
         if (Project.isRemoteWebDriver()) {
+            Configuration.timeout = 6000;
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
             //Configuration.remote = Project.config.remoteDriverUrl();
