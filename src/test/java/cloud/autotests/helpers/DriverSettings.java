@@ -25,14 +25,14 @@ public class DriverSettings {
         Configuration.browser = Project.config.browser();
         Configuration.browserVersion = Project.config.browserVersion();
         Configuration.browserSize = Project.config.browserSize();
-        Configuration.baseUrl = App.config.webUrl();
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
+        Configuration.timeout = 6000;
 
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         ChromeOptions chromeOptions = new ChromeOptions();
         Configuration.browserCapabilities = capabilities;
-        Configuration.timeout = 6000;
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--disable-infobars");
         chromeOptions.addArguments("--disable-popup-blocking");
@@ -53,7 +53,6 @@ public class DriverSettings {
         }
 
         if (Project.isRemoteWebDriver()) {
-            Configuration.timeout = 6000;
             capabilities.setCapability("enableVNC", true);
             capabilities.setCapability("enableVideo", true);
             //Configuration.remote = Project.config.remoteDriverUrl();

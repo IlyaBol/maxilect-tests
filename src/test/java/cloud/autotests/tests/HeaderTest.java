@@ -9,6 +9,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
@@ -21,6 +22,7 @@ import static io.qameta.allure.Allure.step;
         void headerTest() {
             step("Open https://maxilect.com/", () ->
                     open("https://maxilect.com/"));
+
             step("Select Ad Tech", () ->
                     $("#menu-item-626").click());
             step("Select Ad Tech", () ->
