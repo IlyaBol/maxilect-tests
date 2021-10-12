@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 
-public class MaxilectHabr {
+public class MaxilectHabr extends TestBase {
     String Textobject1 = "История программиста, создавшего компанию «",
             Textobject2 = "Maxilect",
             Textobject3 = "», на 100% работающую удаленно",
