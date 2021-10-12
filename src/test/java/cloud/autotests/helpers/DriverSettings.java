@@ -25,8 +25,8 @@ public class DriverSettings {
         Configuration.browser = Project.config.browser();
         Configuration.browserVersion = Project.config.browserVersion();
         Configuration.browserSize = Project.config.browserSize();
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
-        Configuration.timeout = 6000;
+        Configuration.baseUrl = App.config.webUrl();
+
 
 
 
